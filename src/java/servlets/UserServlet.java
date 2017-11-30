@@ -1,7 +1,6 @@
 package servlets;
 
 import businesslogic.UserService;
-import domainmodel.Role;
 import domainmodel.User;
 import java.io.IOException;
 import java.util.List;
@@ -32,9 +31,6 @@ public class UserServlet extends HttpServlet {
                 Logger.getLogger(UserServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
-        
-        
         
         List<User> users = null;        
         try {

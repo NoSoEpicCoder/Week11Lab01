@@ -14,5 +14,6 @@
             Email address: <input type="text" name="email"><br>
             <input type="submit" value="Submit">
         </form>
+        ${errormessageemail}
     </body>
 </html>

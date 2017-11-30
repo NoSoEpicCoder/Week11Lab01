@@ -1,6 +1,5 @@
 package servlets;
 
-import businesslogic.AccountService;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,21 +12,15 @@ public class ResetPasswordServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        getServletContext().getRequestDispatcher("/WEB-INF/reset.jsp/").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/resetNewPassword.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String email = request.getParameter("email");
-        String path = getServletContext().getRealPath("/WEB-INF");
-        String url = request.getRequestURL().toString();
         
-        AccountService as = new AccountService();
-        as.resetPassword(email, path, url);
         
-        getServletContext().getRequestDispatcher("/WEB-INF/reset.jsp/").forward(request, response);
+        getServletContext().getRequestDispatcher("/WEB-INF/resetNewPassword.jsp").forward(request, response);
     }
 }

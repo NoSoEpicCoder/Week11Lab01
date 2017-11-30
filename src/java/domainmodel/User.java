@@ -150,6 +150,15 @@ public class User implements Serializable {
         this.role = role;
     }
 
+    
+    public String getResetPasswordUUID() {
+        return resetPasswordUUID;
+    }
+
+    public void setResetPasswordUUID(String resetPasswordUUID) {
+        this.resetPasswordUUID = resetPasswordUUID;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;
@@ -159,7 +168,6 @@ public class User implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof User)) {
             return false;
         }
@@ -173,14 +181,6 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "domainmodel.User[ username=" + username + " ]";
-    }
-
-    public String getResetPasswordUUID() {
-        return resetPasswordUUID;
-    }
-
-    public void setResetPasswordUUID(String resetPasswordUUID) {
-        this.resetPasswordUUID = resetPasswordUUID;
     }
     
 }

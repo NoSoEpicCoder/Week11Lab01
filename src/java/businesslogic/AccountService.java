@@ -61,7 +61,6 @@ public class AccountService {
     
     public User resetPassword(String email, String path, String url){
         
-        
         UserDB userDB = new UserDB();
 
         try {
@@ -93,5 +92,4 @@ public class AccountService {
             return false;
         }
     }
-
 }

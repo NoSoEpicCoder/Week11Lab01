@@ -29,6 +29,10 @@
         <servlet-class>servlets.HomeServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>ResetServlet</servlet-name>
+        <servlet-class>servlets.ResetServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ResetPasswordServlet</servlet-name>
         <servlet-class>servlets.ResetPasswordServlet</servlet-class>
     </servlet>
@@ -45,8 +49,12 @@
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ResetPasswordServlet</servlet-name>
+        <servlet-name>ResetServlet</servlet-name>
         <url-pattern>/reset</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ResetPasswordServlet</servlet-name>
+        <url-pattern>/resetPassword</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -59,7 +67,7 @@
     <env-entry>
         <env-entry-name>webmail-username</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
-        <env-entry-value>cprg352@gmail.com</env-entry-value>
+        <env-entry-value>kevin.gilbert.sait@gmail.com</env-entry-value>
     </env-entry>
     <env-entry>
         <env-entry-name>webmail-password</env-entry-name>
